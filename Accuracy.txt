@@ -32,8 +32,8 @@ The sum of squares SSB is equal to: 0.20191822897638312
 The sum of squares SSAB is equal to: 0.16068397321669697
 The sum of squares SSE is equal to: 3.6071286380042005
 The sum of squares SST is equal to: 4.4391233079939845
-Sample groups linked to factor WS do not show statistically significant differences with 95% confidence (p-value = 0.05511655882972894)
-Sample groups linked to factor CN do not show statistically significant differences with 95% confidence (p-value = 0.1305024032913059)
-Sample groups linked to factor WS and factor CN combined do not show statistically significant differences with 95% confidence (p-value = 0.15796047004476413)
+Sample groups linked to factor WS do not show statistically significant differences with 95.0% confidence (p-value = 0.0551)
+Sample groups linked to factor CN do not show statistically significant differences with 95.0% confidence (p-value = 0.1305)
+Sample groups linked to factor WS and factor CN combined do not show statistically significant differences with 95.0% confidence (p-value = 0.158)
 Sample level pair linked to factor WS with the lowest paired p-value computed through a post-hoc test is the pair (150,250) with p-value: 0.0728
 Sample level pair linked to factor CN with the lowest paired p-value computed through a post-hoc test is the pair (3,5) with p-value: 0.1614
