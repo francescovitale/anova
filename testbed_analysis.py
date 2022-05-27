@@ -628,7 +628,6 @@ except Exception:
 experimental_data = load_data(input_data_files)
 
 
-# compute sample means and variances
 for dataset in experimental_data:
 
     groups_mean, groups_variance = compute_samples_mean_variance(experimental_data[dataset])
