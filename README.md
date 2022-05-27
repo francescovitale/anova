@@ -5,6 +5,6 @@ This script allows performing one- and two-way ANOVA with a fully generalized st
 
 To run the script, at least two input arguments are required: the first lists the factor(s) (if two factors are analyzed, they must be separated by an underscore character "_").
 
-Following is a sample script execution:
+Following is a sample script execution command:
 
 testbed_analysis WS_NC Accuracy.csv
