@@ -1,0 +1,39 @@
+The sample mean and variance of group 50_3 are: (0.96388,0.00095)
+The sample mean and variance of group 150_3 are: (0.8,0.14088)
+The sample mean and variance of group 250_3 are: (0.87826,0.05047)
+The sample mean and variance of group 50_5 are: (0.74009,0.1213)
+The sample mean and variance of group 150_5 are: (0.60263,0.20095)
+The sample mean and variance of group 250_5 are: (0.96957,0.00038)
+The sample mean and variance of group 50_7 are: (0.75507,0.1222)
+The sample mean and variance of group 150_7 are: (0.55789,0.15691)
+The sample mean and variance of group 250_7 are: (0.84783,0.10775)
+The grand mean of the model is: 0.7905788140785469
+The factor effect WS_50 of the model is: 0.029098131589588072
+The factor effect WS_150 of the model is: -0.13707004214872232
+The factor effect WS_250 of the model is: 0.10797191055913435
+The factor effect CN_3 of the model is: 0.09013369310398511
+The factor effect CN_5 of the model is: -0.019817180056698525
+The factor effect CN_7 of the model is: -0.07031651304728659
+The factor effect WS_50_CN_3 of the model is: 0.05406601321025872
+The factor effect WS_150_CN_3 of the model is: 0.05635753496619034
+The factor effect WS_250_CN_3 of the model is: -0.11042354817644895
+The factor effect WS_50_CN_5 of the model is: -0.05977165988456412
+The factor effect WS_150_CN_5 of the model is: -0.031060012925757552
+The factor effect WS_250_CN_5 of the model is: 0.09083167281032156
+The factor effect WS_50_CN_7 of the model is: 0.005705646674305731
+The factor effect WS_150_CN_7 of the model is: -0.025297522040432896
+The factor effect WS_250_CN_7 of the model is: 0.019591875366127054
+Residuals are not normal
+Residuals are not omoscedastic
+The sum of squares SSY is equal to: 32.56479206513686
+The sum of squares SS0 is equal to: 28.125668757142872
+The sum of squares SSA is equal to: 0.46939246779670807
+The sum of squares SSB is equal to: 0.20191822897638312
+The sum of squares SSAB is equal to: 0.16068397321669697
+The sum of squares SSE is equal to: 3.6071286380042005
+The sum of squares SST is equal to: 4.4391233079939845
+Sample groups linked to factor WS do not show statistically significant differences with 95% confidence (p-value = 0.05511655882972894)
+Sample groups linked to factor CN do not show statistically significant differences with 95% confidence (p-value = 0.1305024032913059)
+Sample groups linked to factor WS and factor CN combined do not show statistically significant differences with 95% confidence (p-value = 0.15796047004476413)
+Sample level pair linked to factor WS with the lowest paired p-value computed through a post-hoc test is the pair (150,250) with p-value: 0.0728
+Sample level pair linked to factor CN with the lowest paired p-value computed through a post-hoc test is the pair (3,5) with p-value: 0.1614
