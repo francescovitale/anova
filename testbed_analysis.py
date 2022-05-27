@@ -479,25 +479,25 @@ def print_ANOVA_results(dataset_name, groups_mean, groups_variance, model, norma
         for factor in statistical_significance_result:
             if factor == "first_factor":
                 if(statistical_significance_result[factor] == True):
-                    print("Sample groups linked to factor " + factor_names[0] + " show statistically significant differences with 95% confidence (p-value = " + str(p_values[factor]) + ")")
-                    file.write("Sample groups linked to factor " + factor_names[0] + " show statistically significant differences with 95% confidence (p-value = " + str(p_values[factor]) + ")\n")
+                    print("Sample groups linked to factor " + factor_names[0] + " show statistically significant differences with " + str((1-conf_level)*100) + "% confidence (p-value = " + str(round(p_values[factor],4)) + ")")
+                    file.write("Sample groups linked to factor " + factor_names[0] + " show statistically significant differences with " + str((1-conf_level)*100) + "% confidence (p-value = " + str(round(p_values[factor],4)) + ")\n")
                 else:
-                    print("Sample groups linked to factor " + factor_names[0] + " do not show statistically significant differences with 95% confidence (p-value = " + str(p_values[factor]) + ")")
-                    file.write("Sample groups linked to factor " + factor_names[0] + " do not show statistically significant differences with 95% confidence (p-value = " + str(p_values[factor]) + ")\n")
+                    print("Sample groups linked to factor " + factor_names[0] + " do not show statistically significant differences with " + str((1-conf_level)*100) + "% confidence (p-value = " + str(round(p_values[factor],4)) + ")")
+                    file.write("Sample groups linked to factor " + factor_names[0] + " do not show statistically significant differences with " + str((1-conf_level)*100) + "% confidence (p-value = " + str(round(p_values[factor],4)) + ")\n")
             elif factor == "second_factor":
                 if(statistical_significance_result[factor] == True):
-                    print("Sample groups linked to factor " + factor_names[1] + " show statistically significant differences with 95% confidence (p-value = " + str(p_values[factor]) + ")")
-                    file.write("Sample groups linked to factor " + factor_names[1] + " show statistically significant differences with 95% confidence (p-value = " + str(p_values[factor]) + ")\n")
+                    print("Sample groups linked to factor " + factor_names[1] + " show statistically significant differences with " + str((1-conf_level)*100) + "% confidence (p-value = " + str(round(p_values[factor],4)) + ")")
+                    file.write("Sample groups linked to factor " + factor_names[1] + " show statistically significant differences with " + str((1-conf_level)*100) + "% confidence (p-value = " + str(round(p_values[factor],4)) + ")\n")
                 else:
-                    print("Sample groups linked to factor " + factor_names[1] + " do not show statistically significant differences with 95% confidence (p-value = " + str(p_values[factor]) + ")")
-                    file.write("Sample groups linked to factor " + factor_names[1] + " do not show statistically significant differences with 95% confidence (p-value = " + str(p_values[factor]) + ")\n")
+                    print("Sample groups linked to factor " + factor_names[1] + " do not show statistically significant differences with " + str((1-conf_level)*100) + "% confidence (p-value = " + str(round(p_values[factor],4)) + ")")
+                    file.write("Sample groups linked to factor " + factor_names[1] + " do not show statistically significant differences with " + str((1-conf_level)*100) + "% confidence (p-value = " + str(round(p_values[factor],4)) + ")\n")
             elif factor == "combined_factor":
                 if(statistical_significance_result[factor] == True):
-                    print("Sample groups linked to factor " + factor_names[0] + " and factor " + factor_names[1] + " combined show statistically significant differences with 95% confidence (p-value = " + str(p_values[factor]) + ")")
-                    file.write("Sample groups linked to factor " + factor_names[0] + " and factor " + factor_names[1] + " combined show statistically significant differences with 95% confidence (p-value = " + str(p_values[factor]) + ")\n")
+                    print("Sample groups linked to factor " + factor_names[0] + " and factor " + factor_names[1] + " combined show statistically significant differences with " + str((1-conf_level)*100) + "% confidence (p-value = " + str(round(p_values[factor],4)) + ")")
+                    file.write("Sample groups linked to factor " + factor_names[0] + " and factor " + factor_names[1] + " combined show statistically significant differences with " + str((1-conf_level)*100) + "% confidence (p-value = " + str(round(p_values[factor],4)) + ")\n")
                 else:
-                    print("Sample groups linked to factor " + factor_names[0] + " and factor " + factor_names[1] + " combined do not show statistically significant differences with 95% confidence (p-value = " + str(p_values[factor]) + ")")
-                    file.write("Sample groups linked to factor " + factor_names[0] + " and factor " + factor_names[1] + " combined do not show statistically significant differences with 95% confidence (p-value = " + str(p_values[factor]) + ")\n")
+                    print("Sample groups linked to factor " + factor_names[0] + " and factor " + factor_names[1] + " combined do not show statistically significant differences with " + str((1-conf_level)*100) + "% confidence (p-value = " + str(round(p_values[factor],4)) + ")")
+                    file.write("Sample groups linked to factor " + factor_names[0] + " and factor " + factor_names[1] + " combined do not show statistically significant differences with " + str((1-conf_level)*100) + "% confidence (p-value = " + str(round(p_values[factor],4)) + ")\n")
             
         print("Sample level pair linked to factor " + factor_names[0] + " with the lowest paired p-value computed through a post-hoc test is the pair (" + min_p_value_idx["first_factor"][0] + "," + min_p_value_idx["first_factor"][1] + ") with p-value: " + str(round(min_p_value["first_factor"],4)))
         file.write("Sample level pair linked to factor " + factor_names[0] + " with the lowest paired p-value computed through a post-hoc test is the pair (" + min_p_value_idx["first_factor"][0] + "," + min_p_value_idx["first_factor"][1] + ") with p-value: " + str(round(min_p_value["first_factor"],4))+"\n")
@@ -635,8 +635,6 @@ for dataset in experimental_data:
     model = compute_model(experimental_data[dataset], factor_names)
     
     residuals, predicted_responses = compute_residuals(experimental_data[dataset], model, factor_names)
-    
-    print(predicted_responses)
     
     normality_check_result = check_normality(residuals)
     
