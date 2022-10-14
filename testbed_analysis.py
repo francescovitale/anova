@@ -282,10 +282,30 @@ def compute_SS(residuals, model, experimental_data, factor_names):
     
     return SS, df
 
-def check_statistical_significance(SSs, dfs):
+def check_statistical_significance(experimental_data, factor_names, conf_level):
 
-    # to implement
+   
+	
+	statistical_significance_result = {}
+	p_values = {}
+	n_factors = len(factor_names)
+	
+	if n_factors == 1:
+	
+		factor_groups = []
+		for column in experimental_data:
+			factor_groups.append(experimental_data[column])
+			
+		test_statistic, p_value = stats.f_oneway(*factor_groups)
+		p_values[factor_names[0]] = p_value
+		
+		if p_value > conf_level:
+			statistical_significance_result[factor_names[0]] = False
+		else:
+			statistical_significance_result[factor_names[0]] = True
 
+	if n_factors == 2:
+	# to implement
     '''
     F_value = 2.709 # alpha = 0.05
 
@@ -299,7 +319,7 @@ def check_statistical_significance(SSs, dfs):
         return False
     '''
 
-    return None
+    return statistical_significance_result, p_values
 
 def check_statistical_significance_non_parametric(experimental_data, factor_names, conf_level):
 
