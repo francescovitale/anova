@@ -7,4 +7,4 @@ To run the script, at least two input arguments are required: the first lists th
 
 Following is a sample script execution command:
 
-testbed_analysis WS_NC Accuracy.csv
+anova.py WS_NC Accuracy.csv
